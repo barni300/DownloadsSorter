@@ -2,7 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 
-string sourceDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Your path to the Downloads or any other folder");
+string sourceDir = @"Your path to the Downloads or any other folder";
 
 
 if (!Directory.Exists(sourceDir))
@@ -13,12 +13,12 @@ if (!Directory.Exists(sourceDir))
 
 var sortingRules = new Dictionary<string, string[]>
 {
-    { "Images",    new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp" } },
-    { "Documents", new[] { ".pdf", ".docx", ".doc", ".xlsx", ".txt", ".pptx" } },
-    { "Archives",  new[] { ".zip", ".rar", ".7z", ".tar", ".gz" } },
-    { "Programs",  new[] { ".exe", ".msi"} },
-    { "Videos",    new[] { ".mp4", ".mkv", ".avi", ".mov" } },
-    { "Music",     new[] { ".mp3", ".wav", ".flac", ".aac" } }
+    { "Images🖼️",    new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp" } },
+    { "Documents📑", new[] { ".pdf", ".docx", ".doc", ".xlsx", ".txt", ".pptx" } },
+    { "Archives🗄️",  new[] { ".zip", ".rar", ".7z", ".tar", ".gz" } },
+    { "Programs💽",  new[] { ".exe", ".msi"} },
+    { "Videos🎞️",    new[] { ".mp4", ".mkv", ".avi", ".mov" } },
+    { "Music🎵",     new[] { ".mp3", ".wav", ".flac", ".aac" } }
 };
 
 Console.WriteLine($"Start sorting the folder: {sourceDir}\n");
@@ -52,7 +52,7 @@ try
         
         if (!isSorted)
         {
-            MoveFile(sourceDir, file, "Unsorted", fileName, extension);
+            MoveFile(sourceDir, file, "Unsorted⁉️", fileName, extension);
             movedCount++;
         }
     }
