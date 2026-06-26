@@ -17,7 +17,7 @@ A fast C# (.NET) CLI utility created to automatically organize your cluttered do
 2. Open the project in your IDE.
 3. In `Program.cs`, replace the placeholder with your actual folder path:
    ```csharp
-   string sourceDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "C:\\Your\\Folder\\Path");
+   string sourceDir = @"C:\\Your\\Folder\\Path";
    ```
 4. Run the application.
 
